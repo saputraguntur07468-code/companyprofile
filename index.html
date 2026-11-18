@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Profile</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* NAVBAR */
+header {
+    background: #101d35;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: #00c2ff;
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #00c2ff;
+}
+
+/* HOME */
+.hero {
+    height: 550px;
+    background: linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.7)
+    ), url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #00c2ff;
+    padding: 13px 25px;
+    color: #101d35;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    padding: 70px 8%;
+}
+
+.judul {
+    text-align: center;
+    font-size: 30px;
+    color: #101d35;
+    margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CARD */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000015;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #008fc2;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+/* PRODUCTS */
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+.contact {
+    background: #101d35;
+    color: white;
+    text-align: center;
+}
+
+.contact .judul {
+    color: white;
+}
+
+.contact p {
+    margin: 12px;
+}
+
+/* FOOTER */
+footer {
+    background: #081225;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <h2 class="logo">MY COMPANY</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+    <div>
+        <h1>WELCOME TO MY COMPANY</h1>
+        <p>Solusi Terbaik Untuk Masa Depan Bisnis Anda</p>
+        <a href="#about" class="btn">Learn More</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="judul">ABOUT US</h2>
+
+    <div class="about">
+        <p>
+            MY COMPANY merupakan perusahaan yang bergerak
+            di bidang teknologi dan layanan digital.
+            Kami memberikan pelayanan terbaik dengan
+            mengutamakan kualitas, kreativitas, dan inovasi.
+        </p>
+
+        <br>
+
+        <p>
+            Visi: Menjadi perusahaan teknologi terpercaya
+            dan profesional.
+        </p>
+
+        <p>
+            Misi: Memberikan solusi teknologi yang modern,
+            berkualitas, dan bermanfaat.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2 class="judul">OUR SERVICES</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>
+                Membuat website profesional,
+                modern, dan responsif.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>IT Support</h3>
+            <p>
+                Melayani perbaikan komputer
+                dan troubleshooting jaringan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Marketing</h3>
+            <p>
+                Membantu pemasaran produk
+                melalui media digital.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <h2 class="judul">OUR PRODUCTS</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Website">
+            <h3>Website</h3>
+            <p>Website perusahaan dan bisnis.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Aplikasi">
+            <h3>Aplikasi</h3>
+            <p>Aplikasi digital untuk kebutuhan bisnis.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" alt="Jaringan">
+            <h3>Network</h3>
+            <p>Instalasi dan konfigurasi jaringan.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2 class="judul">CONTACT US</h2>
+
+    <p>Email: mycompany@gmail.com</p>
+    <p>Telepon: 081234567890</p>
+    <p>Alamat: Indonesia</p>
+
+    <br>
+
+    <a href="https://wa.me/6281234567890"
+       class="btn" target="_blank">
+       Hubungi Kami
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 MY COMPANY. All Rights Reserved.</p>
+</footer>
+
+</body>
+  </html>
+          
